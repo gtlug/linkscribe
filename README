@@ -1,0 +1,8 @@
+README for linkscribe
+
+linkscribe is an IRC bot written in Perl.
+
+It sits in a channel and watches for URLs.
+
+When seen, it shortens URLs and echos the shortened URL
+to the channel.
