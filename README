@@ -6,3 +6,11 @@ It sits in a channel and watches for URLs.
 
 When seen, it shortens URLs and echos the shortened URL
 to the channel.
+
+
+Example oneliner for new system:
+perl -MLS::Controller -le 'my $ls = LS::Controller->new( botname => "linkscribe" ); print $ls->botname . "\n"; $ls->parse;  print "howdy";'
+
+The oneliner assumes your PERL5LIB env variable is pointing at repo.git/LS 
+
+Right now, it doesn't do much except print out an exception.
