@@ -486,14 +486,14 @@ sub cmd_PublicCommand {
 	}
 }
 
-Irssi::signal_add_last('message public', 'cmd_logurl');
+Irssi::signal_add_last('message public',  'cmd_logurl');
 #Irssi::signal_add_last('message own_public', 'cmd_own');
-Irssi::signal_add_last('message topic', 'cmd_topic');
-Irssi::signal_add_last('message quit', 'cmd_quit');
-Irssi::signal_add_last('message part', 'cmd_part');
-Irssi::signal_add_last('message join', 'cmd_join');
+Irssi::signal_add_last('message topic',   'cmd_topic');
+Irssi::signal_add_last('message quit',    'cmd_quit');
+Irssi::signal_add_last('message part',    'cmd_part');
+Irssi::signal_add_last('message join',    'cmd_join');
 Irssi::signal_add_last('message private', 'cmd_PrivMsg');
-Irssi::signal_add_last('channel joined', 'cmd_ChanJoined');
+Irssi::signal_add_last('channel joined',  'cmd_ChanJoined');
 Irssi::print("URL logger by speedy loaded.");
 
 Irssi::theme_register(['url_post', '$1 %W$2%n $3-']);
