@@ -1,8 +1,6 @@
 package LS::Controller;
-use Moo;
-with 'LS::InputParser';
-
-#with 'Throwable';
+use Mouse;
+with qw(LS::Base LS::Parser);
 
 ### Will use Module::Pluggable to load the plugins for LS::Command and LS::URL, etc..
 ## once we load plugins, we scan them for their capabilities.  
@@ -20,15 +18,11 @@ with 'LS::InputParser';
 ## If URLs are managed via a LS::URL module (or whatever name), what is the
 ## best way to handle informing LS::Controller of what should be done.
 
-has botname => (
+has botnick => (
 	is => 'ro',
 	default => sub { 'linkscribe' },
 );
 
-#has parser => (
-#	is      => 'rw',
-#	handles => 'LS::InputParser',
-#);
-
-
+__PACKAGE__->meta->make_immutable;
+no Mouse;
 1;

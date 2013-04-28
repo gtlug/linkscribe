@@ -3,7 +3,7 @@ use base 'LS::Exception::Base';
 use strict;
 use warnings;
 
-use Moo::Role;
+use Mouse::Role;
 
 use Exception::Class (
 	'LS::Exception::Insufficient' => {
@@ -19,4 +19,5 @@ use Exception::Class (
 
 LS::Exception->Trace(1);
 
+no Mouse::Role;
 1;

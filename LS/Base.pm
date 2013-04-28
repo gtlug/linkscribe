@@ -1,6 +1,10 @@
 package LS::Base;
-use LS::Exception;
-use Moo;
+use namespace::autoclean;
+use strict;
+use warnings;
 
+use Mouse::Role;
+with qw(LS::Exception);
 
+no Mouse::Role;
 1;
