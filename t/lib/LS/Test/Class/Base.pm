@@ -1,12 +1,7 @@
 package LS::Test::Class::Base;
-use base qw(Test::Class Class::Data::Inheritable);
+use base qw(Test::Class);
 
-use Test::More;
-use Test::Deep;
-
-#BEGIN {
-#	__PACKAGE__->mk_classdata('class');
-#}
+use LS::Test::Class;
 
 sub _startup:Tests( startup ) {
 	diag('Starting Tests');
